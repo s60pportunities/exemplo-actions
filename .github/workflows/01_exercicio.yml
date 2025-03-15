@@ -43,6 +43,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.TOKEN_PROJETO }}
         run: |
+               echo $GH_TOKEN | gh auth login --with-token
                gh issue create --title "Nova Issue para Desenvolvimento" \
                           --body "📅 **Data de criação:** ${{ env.date }} UTC\n\n🚀 Esta issue foi criada automaticamente após um push na branch de desenvolvimento." \
                           --repo ${{ github.repository }}   
