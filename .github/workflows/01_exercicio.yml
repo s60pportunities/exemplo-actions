@@ -1,0 +1,23 @@
+name: Exercicio 01
+
+  workflow_dispatch:
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lint 01
+         run: echo " Step 01: Lint 01"
+  build:
+    needs: lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build 01
+         run: echo " Step 01: Build 01"
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy 01
+         run: echo " Step 01: Deploy 01"
+       
+  
