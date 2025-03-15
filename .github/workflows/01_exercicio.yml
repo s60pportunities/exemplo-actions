@@ -40,7 +40,7 @@ jobs:
         run: |
           gh issue create --title "Nova Issue Automática" \
                           --project "PROJETO" \
-                          --assigne @me \
+                          --assignee @me \
                           --label bug \
                           --body "Esta issue foi criada automaticamente após um push na branch main." \
                           --repo ${{ github.repository }}      
