@@ -32,9 +32,14 @@ jobs:
     name: create-issue
     runs-on: ubuntu-latest
     steps:
+      - name: Configurar fuso horário para UTC-3 (América/São Paulo)
+        run: |
+          sudo timedatectl set-timezone America/Sao_Paulo
+          timedatectl
+    
       - name: Obter data atual
         id: get-date
-        run: echo "date=$(date -u '+%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
+        run: echo "date=$(date -u '%Y-%m-%d %H:%M:%S %Z')" >> $GITHUB_ENV
         
       - name: Checar o repositório
         uses: actions/checkout@v4
