@@ -10,6 +10,7 @@ jobs:
         run: |
           echo "Lint ${{ github.event.inputs.NAME }} and ${{ github.event.inputs.SOME_VALUE }}!"
   build:
+    needs: lint
     name: build
     runs-on: ubuntu-latest
     steps:
@@ -17,6 +18,7 @@ jobs:
         run: |
           echo "Build ${{ github.event.inputs.NAME }} and ${{ github.event.inputs.SOME_VALUE }}!"
   deploy:
+    needs: build
     name: deploy
     runs-on: ubuntu-latest
     steps:
