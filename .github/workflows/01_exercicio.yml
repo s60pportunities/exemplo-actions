@@ -39,8 +39,8 @@ jobs:
     
       - name: Obter data atual
         id: get-date
-        run: echo "date=$(date -u '%Y-%m-%d %H:%M:%S %Z')" >> $GITHUB_ENV
-        
+        run: echo "date=$(date -u '%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
+
       - name: Checar o repositório
         uses: actions/checkout@v4
         
