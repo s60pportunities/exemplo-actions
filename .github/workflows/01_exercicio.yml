@@ -31,11 +31,17 @@ jobs:
     name: create-issue
     runs-on: ubuntu-latest
     steps:
+      - name: Checar o repositório
+        uses: actions/checkout@v4
+        
       - name: Criar Issue no Repositório
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh issue create --title "Nova Issue Automática" \
+                          --project "PROJETO" \
+                          --assigne @me \
+                          --label bug \
                           --body "Esta issue foi criada automaticamente após um push na branch main." \
                           --repo ${{ github.repository }}      
   
