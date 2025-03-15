@@ -46,6 +46,7 @@ jobs:
       - name: Criar Issue no Repositório
         run: |
                gh issue create --title "Nova Issue para Desenvolvimento" \
-                          --body "📅 **Data de criação:** ${{ env.date }} UTC\n\n🚀 Esta issue foi criada automaticamente após um push na branch de desenvolvimento." \
+                          --project "PROJETO" \
+                          --body "📅 **Data de criação:** ${{ env.date }} UTC: </br>🚀 Esta issue foi criada automaticamente após um push na branch de desenvolvimento." \
                           --repo ${{ github.repository }}   
   
