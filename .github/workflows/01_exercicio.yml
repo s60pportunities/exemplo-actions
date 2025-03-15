@@ -39,11 +39,12 @@ jobs:
       - name: Checar o repositório
         uses: actions/checkout@v4
         
-      - name: Criar Issue no Repositório
-        env:
-          GH_TOKEN: ${{ secrets.TOKEN_PROJETO }}
+      - name: Configurar GitHub CLI
         run: |
-               echo $GH_TOKEN | gh auth login --with-token
+          gh auth login --with-token <<< "${{ secrets.TOKEN_PROJETO }}"
+        
+      - name: Criar Issue no Repositório
+        run: |
                gh issue create --title "Nova Issue para Desenvolvimento" \
                           --body "📅 **Data de criação:** ${{ env.date }} UTC\n\n🚀 Esta issue foi criada automaticamente após um push na branch de desenvolvimento." \
                           --repo ${{ github.repository }}   
