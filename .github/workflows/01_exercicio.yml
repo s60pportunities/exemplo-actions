@@ -27,8 +27,8 @@ jobs:
           echo "Deploy ${{ github.event.inputs.NAME }} and ${{ github.event.inputs.SOME_VALUE }}!"
    
   create-issue:
-    needs: deply
-    name: create-issue:
+    needs: deploy
+    name: create-issue
     runs-on: ubuntu-latest
     steps:
       - name: Criar Issue no Repositório
