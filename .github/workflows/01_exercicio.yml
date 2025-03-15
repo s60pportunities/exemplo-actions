@@ -53,6 +53,6 @@ jobs:
                gh issue create --title "Nova Issue para Desenvolvimento" \
                           --project "PROJETO" \
                           --label "bug" \
-                          --body "📅 **Data de criação:** ${{ env.date }} UTC: </br>🚀 Esta issue foi criada automaticamente após um push na branch de desenvolvimento." \
+                          --body "📅 **Data de criação:** ${{ env.DATA_UTC3 }} UTC: </br>🚀 Esta issue foi criada automaticamente após um push na branch de desenvolvimento." \
                           --repo ${{ github.repository }}   
   
