@@ -1,5 +1,5 @@
 name: Exercicio 01
-
+on:
   workflow_dispatch:
 jobs:
   lint:
