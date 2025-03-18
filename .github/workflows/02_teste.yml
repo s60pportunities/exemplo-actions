@@ -1,5 +1,5 @@
-name: Example Workflow
-on: 
+name: Exercicio 02
+on:
   workflow_dispatch:
 
 jobs:
