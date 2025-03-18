@@ -2,6 +2,15 @@ name: Exercicio 01
 on:
   workflow_dispatch:
 jobs:
+  build_random:
+    name: build_random 
+    runs-on: ubuntu-latest
+    steps:
+    - name: Generate a random number
+      id: random_number
+      run: echo "::set-output name=number::$(shuf -i 1-100 -n 1)"
+    - name: Print the random number
+      run: echo "The random number is ${{ steps.random_number.outputs.number }}"
   lint:
     name: Lint
     runs-on: ubuntu-latest
