@@ -18,7 +18,7 @@ jobs:
     - name: Print the random number
       run: |
             echo "The random number is ${{ steps.random_number.outputs.numero }}"
-            echo "Parte: ${env.API_BASE_URL}"
+            echo "Parte: ${API_BASE_URL}"
   lint:
     name: Lint
     runs-on: ubuntu-latest
