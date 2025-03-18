@@ -8,6 +8,9 @@ jobs:
     env:
       API_BASE_URL: "https://api.example.com"
     steps:
+    - name: Imprime variavel
+      run: echo "Nome da variacel $API_BASE_URL"
+      
     - name: Generate a random number
       id: random_number
       # Obsoleto: run: echo "::set-output name=number::$(shuf -i 1-100 -n 1)"
