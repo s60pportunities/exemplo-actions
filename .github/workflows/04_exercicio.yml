@@ -10,7 +10,7 @@ jobs:
     
     runs-on: ubuntu-latest
     environment: 
-      name: production
+      name: producao
       url: https://github.com
       
       
