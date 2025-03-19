@@ -1,4 +1,4 @@
-name: GitHub Environments
+name: 04_exercicio
 
 on:
   workflow_dispatch:
